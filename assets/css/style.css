@@ -12,7 +12,7 @@
 h1 {
   font-family: 'Georgia', Times, Times New Roman, serif;
   color: white;
-  font-size: 2em;
+/*  font-size: 2em;*/
 }
 
 /*2 classes used to center items*/
@@ -116,14 +116,21 @@ footer hr{
   /*pushes the nav full menu to the right*/
   nav {
     float: right;
-    display: inline-block;
     border-width: 0;
+    margin: 0;
   }
 
-  /*makes the name full up the header vertically*/
+  .parent-center-child {
+    position: absolute;
+    top: 50%;
+    left: calc((50% - 2em) / 2);
+    transform: translate(0, -50%);
+  }
+
   .topnav {
-    height: 3em;
-    position: initial;
+    position: absolute;
+    bottom: 0;
+    right: 0;
   }
 
   /*reveals the hidden responsive elements for desktop*/
@@ -142,11 +149,12 @@ footer hr{
     margin: 0;
     padding: 0;
     height: 3em;
-    width: 400px;
+    width: 10em;
+    font-size: 1.5em;
   }
 
   h1 {
-    font-size: 1.5em;
+    
   }
 
   /*groups things tighter for the desktop view*/
@@ -154,5 +162,6 @@ footer hr{
     width: 960px;
     margin: 0 auto;
     padding: 0;
+    position: relative;
   }
 }
