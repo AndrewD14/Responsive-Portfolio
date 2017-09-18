@@ -6,13 +6,27 @@
 }
 
 .wrapper {
-  background: url("../images/diamond_upholstery.png") repeat; 
+  background: url("../images/diamond_upholstery.png") repeat;
+  padding: 5px;
 }
 
 h1 {
   font-family: 'Georgia', Times, Times New Roman, serif;
   color: white;
-/*  font-size: 2em;*/
+  font-size: 2em;
+}
+
+h2{
+  color: #4aaaa5;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+/*puts a bottom border on the header*/
+header {
+  border-color: #cccccc;
+  border-style: solid;
+  border-bottom-width: 2px;
 }
 
 /*2 classes used to center items*/
@@ -80,6 +94,67 @@ h1 {
   height: 3.5em;
 }
 
+/*main content*/
+.main {
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-color: #dddddd;
+  border-style: solid;
+  border-width: 2px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.main p {
+  display: block;
+  margin-top: 10px;
+}
+
+.about-img {
+  float: left;
+  margin-right: 10px;
+}
+
+/*connect section*/
+.connect {
+  margin-top: 10px;
+  padding-left: 30px;
+  padding-right:30px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  border-color: #dddddd;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.connect ul li {
+  display: inline;
+  margin-left: 5px;
+}
+
+.connect ul li a {
+  text-decoration: none;
+}
+
+#github {
+  background-color: black;
+}
+
+.connect-border {
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 12px;
+}
+
+.connect img {
+  height: 50px;
+  width: 50px;
+}
+
 footer {
   background-color: #666666;
   margin: 0;
@@ -107,23 +182,16 @@ footer hr{
 
 /*desktop overriding styles*/
 @media screen and (min-width: 980px) {
-  header {
-    border-color: #cccccc;
-    border-style: solid;
-    border-bottom-width: 2px;
-  }
-
   /*pushes the nav full menu to the right*/
   nav {
     float: right;
     border-width: 0;
-    margin: 0;
   }
 
   .parent-center-child {
     position: absolute;
     top: 50%;
-    left: calc((50% - 2em) / 2);
+    left: calc(25% - 1.5em);
     transform: translate(0, -50%);
   }
 
@@ -149,12 +217,13 @@ footer hr{
     margin: 0;
     padding: 0;
     height: 3em;
-    width: 10em;
-    font-size: 1.5em;
+    width: 17em;
+    font-size: 1em;
   }
 
-  h1 {
-    
+  /*makes the wrapper push the footer to the bottom in desktop*/
+  .wrapper {
+    min-height: calc(100vh - 6px - 7em);
   }
 
   /*groups things tighter for the desktop view*/
@@ -163,5 +232,16 @@ footer hr{
     margin: 0 auto;
     padding: 0;
     position: relative;
+  }
+
+  .main {
+    width: 559px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .connect {
+    float: right;
+    width: 209px;
   }
 }
