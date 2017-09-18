@@ -1,0 +1,157 @@
+/*general class*/
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.wrapper {
+  background: url("../images/diamond_upholstery.png") repeat; 
+}
+
+h1 {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  color: white;
+  font-size: 2em;
+}
+
+/*2 classes used to center items*/
+.parent-center {
+  position: relative;
+  height: 3.5em;
+}
+
+.parent-center-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*responsive nav style*/
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a {
+    display: none;
+}
+
+.topnav a.icon {
+  float: right;
+  display: block;
+}
+
+.topnav.responsive {
+  position: relative;
+}
+
+.topnav.responsive .icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+/*main div for name*/
+.name {
+  background-color: #4aaaa5;
+  color: white;
+}
+
+footer {
+  background-color: #666666;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+/*footer spacer bar*/
+footer hr{
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 5px;
+  color: #4faaa4;
+}
+
+/*text in footer*/
+.copyright {
+  text-align: center;
+}
+
+/*desktop overriding styles*/
+@media screen and (min-width: 980px) {
+  header {
+    border-color: #cccccc;
+    border-style: solid;
+    border-bottom-width: 2px;
+  }
+
+  /*pushes the nav full menu to the right*/
+  nav {
+    float: right;
+    display: inline-block;
+    border-width: 0;
+  }
+
+  /*makes the name full up the header vertically*/
+  .topnav {
+    height: 3em;
+    position: initial;
+  }
+
+  /*reveals the hidden responsive elements for desktop*/
+  .topnav a {
+    display: block;
+  }
+
+  /*hides the hamburger menu icon*/
+  .topnav a.icon {
+    display: none;
+  }
+
+  /*pushes the name to display to the left*/
+  .name {
+    float: left;
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    height: 3em;
+    width: 400px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  /*groups things tighter for the desktop view*/
+  .content {
+    width: 960px;
+    margin: 0 auto;
+  }
+}
