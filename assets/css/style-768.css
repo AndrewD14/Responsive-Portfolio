@@ -1,0 +1,85 @@
+/*Phone landscape and tablets*/
+@media screen and (min-width: 768px) {
+  /*pushes the nav full menu to the right*/
+  nav {
+    float: right;
+    border-width: 0;
+  }
+
+  .topnav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-width: 0;
+    min-height: 100%;
+  }
+
+  /*reveals the hidden responsive elements for desktop*/
+  .topnav a {
+    display: block;
+  }
+
+  /*hides the hamburger menu icon*/
+  .topnav a.icon {
+    display: none;
+  }
+
+  /*pushes the name to display to the left*/
+  .name {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+    height: 3em;
+    width: 17em;
+    font-size: 1em;
+  }
+
+  /*makes the wrapper push the footer to the bottom in desktop*/
+  .wrapper {
+    min-height: calc(100vh - 10px - 6em);
+  }
+
+  .about-img {
+    float: left;
+    margin-right: 10px;
+    width: auto;
+  }
+
+  /*groups things tighter for the desktop view*/
+  .content {
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    width: 94%;
+  }
+
+  .portfolio img {
+    height: auto;
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  .portfolio-full{
+    position: relative;
+    margin-bottom: 20px;
+    width: 40%;
+  }
+
+  .portfolio-label {
+    color: white;
+    font-weight: bold;
+    background-color: #4aaaa5;
+    font-size: 1.25em;
+    line-height: 25px;
+  }
+
+  .portfolio .portfolio-full:nth-child(even) {
+    float: right;
+  }
+
+  .portfolio .portfolio-full:nth-child(odd) {
+    float: left;
+  }
+}
