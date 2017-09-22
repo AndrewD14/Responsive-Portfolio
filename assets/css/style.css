@@ -7,7 +7,8 @@
 
 .wrapper {
   background: url("../images/diamond_upholstery.png") repeat;
-  padding: 5px;
+  width: 100%;
+  display: block;
 }
 
 h1 {
@@ -31,14 +32,14 @@ header {
 
 /*2 classes used to center items*/
 .parent-center {
-  position: relative;
+  display: table;
+  text-align: center;
+  width: 100%;
 }
 
 .parent-center-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: table-cell;
+  vertical-align: middle;
 }
 
 /*responsive nav style*/
@@ -93,15 +94,16 @@ header {
 
 /*main content*/
 .main {
-  margin-bottom: 10px;
   background-color: #ffffff;
   border-color: #dddddd;
   border-style: solid;
   border-width: 2px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   padding-top: 5px;
   padding-bottom: 5px;
+  width: 90%;
+  margin: 10px auto 10px auto;
 }
 
 .main p {
@@ -110,21 +112,24 @@ header {
 }
 
 .about-img {
-  float: left;
-  margin-right: 10px;
+  display: block;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 /*connect section*/
 .connect {
-  margin-top: 10px;
-  padding-left: 30px;
-  padding-right:30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   background-color: #ffffff;
   border-color: #dddddd;
   border-style: solid;
   border-width: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 90%;
+  margin: 10px auto 10px auto;
 }
 
 .connect ul li {
@@ -162,19 +167,11 @@ footer {
 
 /*footer spacer bar*/
 footer hr{
-  display: block;
   margin-top: 0;
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 15px;
   border-style: solid;
   border-width: 5px;
   color: #4faaa4;
-}
-
-/*text in footer*/
-.copyright {
-  text-align: center;
 }
 
 /*desktop overriding styles*/
